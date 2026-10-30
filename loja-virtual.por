@@ -1,6 +1,7 @@
 programa {
   funcao inicio() {
     
+
          // Variaveis de controle de navegação
    inteiro opcao_menu_principal = -1
    inteiro opcao_crud = -1
@@ -23,7 +24,10 @@ programa {
      inteiro qtd_carrinho_prod3 = 0
 
     // Variáveis auxiliares para operações
-@@ -10,10 +30,44 @@ programa {
+    inteiro quantidade_tempo = 0
+    real valor_total_bruto = 0.0
+    real valor_desconto = 0.0
+    real valor_final = 0.0
 
     // 1. LAÇO PRINCIPAL DO SISTEMA
     enquanto (opcao_menu_principal !=0){
@@ -37,7 +41,7 @@ programa {
       escreva("Pressione ENTER para voltar ao menu...")
       leia(tecla_pausa)
       pare
-                                      
+
     //=======================================
     // R - READ (Visualizar o Carrinho)
     // ======================================
@@ -48,7 +52,6 @@ programa {
       escreva("=== BEM VINDO À NOSSA LOJA VIRTUAL ===")
 
       escreva("------------------------------------------")
-      escreva("MENU PRINCIPAL
       escreva("MENU PRINCIPAL")
 
         escreva("1. Ver produtos e adicionar ao carrinho (CREATE)")
@@ -69,3 +72,23 @@ programa {
             // =======================================================
             // C - CREATE (Adicionar Itens oa Carrinho)
             // =======================================================
+            // =======================================================
+
+            caso 1:
+    limpa()
+    escreva("--- CATÁLOGO DE PRODUTOS ---\n")
+    
+    escreva("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") - R$ ", preco_
+    escreva("2. Boné Casual      (Estoque: ", estoque_prod2, ") - R$ ", preco_
+    escreva("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") - R$ ", preco_
+    
+    escreva("Escolha o produto que deseja adicionar: ")
+    leia(opcao_crud)
+    
+    escreva("Digite a quantidade desejada: ")
+    leia(quantidade_temp)
+    
+    se (opcao_crud == 1)
+    {
+        se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
+            
