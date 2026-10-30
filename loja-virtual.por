@@ -1,8 +1,8 @@
 programa {
   funcao inicio() {
-    
 
          // Variaveis de controle de navegação
+       // Variaveis de controle de navegação
    inteiro opcao_menu_principal = -1
    inteiro opcao_crud = -1
    inteiro opcao_pagamento = 0
@@ -72,23 +72,38 @@ programa {
             // =======================================================
             // C - CREATE (Adicionar Itens oa Carrinho)
             // =======================================================
-            // =======================================================
 
             caso 1:
     limpa()
     escreva("--- CATÁLOGO DE PRODUTOS ---\n")
-    
+
     escreva("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") - R$ ", preco_
     escreva("2. Boné Casual      (Estoque: ", estoque_prod2, ") - R$ ", preco_
     escreva("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") - R$ ", preco_
-    
+
     escreva("Escolha o produto que deseja adicionar: ")
     leia(opcao_crud)
-    
+
     escreva("Digite a quantidade desejada: ")
     leia(quantidade_temp)
-    
+
     se (opcao_crud == 1)
     {
         se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
+            
+                qtd_carrinh_prod1 = qtd_carrinh_prod1 + quantidade_temp
+        estoque_prod1 = estoque_prod1 - quantidade_temp
+        escreva("Item adicionado ao carrinho com sucesso!")
+
+      } senao {
+          escreva("Quantidade invalida ou estoque insuficiente!")
+
+      }
+
+   }senao se (opcao_crud == 2)
+   {
+     se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2) {
+         qtd_carrinh_prod2 = qtd_carrinh_prod2 + quantidade_temp
+         estoque_prod2 = estoque_prod2 - quantidade_temp
+         escreva("Item adicionado ao carrinho com sucesso!")
             
