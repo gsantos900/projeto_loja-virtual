@@ -132,7 +132,6 @@ programa {
        caso 2:
           limpa()
           escreva("--- MEU CARRINHO DE COMPRAS ---")
-          escreva("--- MEU CARRINHO DE COMPRAS ---")
           se (qtd_carrinho_prod1 == 0 e qtd_carrinho_prod2 == 0 e qtd_carrinho_prod3 == 0) 
 {
     escreva("Seu carrinho está vazio.")
@@ -147,3 +146,22 @@ senao
     }
     se (qtd_carrinho_prod3 > 0) {
         escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida (R$ ", (qtd_carrinho_prod3 * preco_prod3), ")")
+        escreva("- ", qtd_carrinho_prod3, "x Tênis de Corrida (R$ ", (qtd_carrinho_prod3 * preco_prod3), ")")
+
+        inteiro tecla_pausa
+inteiro qtd_carrinho_prod1
+inteiro qtd_carrinho_prod2
+inteiro qtd_carrinho_prod3
+escreva ("Pressione ENTER para voltar ao menu...")
+leia (tecla_pausa)
+pare
+
+  //==============================================  
+  //U - UPDATE (Atualizar Quantidade no Carrinho)
+  //==============================================
+limpa ()
+escreva ("--- ALTERAR QUANTIDADE NO CARRINHO ---")
+
+escreva ("1. Camisa esportiva (No carrinho: ", qtd_carrinho_prod1, ")")
+escreva ("2. Boné Casual (No carrinho: ", qtd_carrinho_prod2, ")")
+escreva ("3. Tenis De Corrida (No carrinho: ", qtd_carrinho_prod3, ")")
