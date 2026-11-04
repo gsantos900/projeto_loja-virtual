@@ -34,6 +34,7 @@ programa {
       limpa()
         }
             senao {
+              
       escreva("Produto inválido!")
     }
       escreva("Pressione ENTER para voltar ao menu...")
@@ -66,24 +67,25 @@ programa {
         leia(opcao_menu_principal)
 
         escreva(opcao_menu_principal)
+
         {
             // =======================================================
             // C - CREATE (Adicionar Itens oa Carrinho)
             // =======================================================
 
-            caso 1:
-    limpa()
-    escreva("--- CATÁLOGO DE PRODUTOS ---\n")
+                    caso 1:
+            limpa()
+            escreva("--- CATÁLOGO DE PRODUTOS ---\n")
 
-    escreva("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") - R$ ", preco_
-    escreva("2. Boné Casual      (Estoque: ", estoque_prod2, ") - R$ ", preco_
-    escreva("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") - R$ ", preco_
+            escreva("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") - R$ ", preco_
+            escreva("2. Boné Casual      (Estoque: ", estoque_prod2, ") - R$ ", preco_
+            escreva("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") - R$ ", preco_
 
-    escreva("Escolha o produto que deseja adicionar: ")
-    leia(opcao_crud)
+            escreva("Escolha o produto que deseja adicionar: ")
+            leia(opcao_crud)
 
-    escreva("Digite a quantidade desejada: ")
-    leia(quantidade_temp)
+            escreva("Digite a quantidade desejada: ")
+            leia(quantidade_temp)
 
     se (opcao_crud == 1)
     {
@@ -185,21 +187,55 @@ escreva ("3. Tenis De Corrida (No carrinho: ", qtd_carrinho_prod3, ")")
      } senao {
          estoque_prod1 = estoque_prod1qtd_carrinho_prod1
 
-   escreva("Quantidade invalida ou acima do estoque disponivel /n")
+         escreva("Quantidade invalida ou acima do estoque disponivel /n")
+         
     }
 }
 senao se (opcao_crud == 2)
 {
     estoque_prod2 = estoque_prod2 + qtd_carrinho_prod2
+
     escreva("Digite a NOVA quantidade total para este item: ")
+
     leia(quantidade_temp)
-    
+
     se (quantidade_temp >= 0 e quantidade_temp <= estoque_prod2) {
+
         qtd_carrinho_prod2 = quantidade_temp
+
         estoque_prod2 = estoque_prod2 - quantidade_temp
+
         escreva("Quantidade atualizada com sucesso!\n")
+
     } senao {
+
         estoque_prod2 = estoque_prod2 - qtd_carrinho_prod2
+
         escreva("Quantidade inválida ou acima do estoque disponível!\n")
+
     }
 }
+       escreva("Quantidade invalida ou acima do estoque disponivel!")
+
+       }
+
+     }
+       senao se (opcao_crud)
+
+     {
+       estoque_prod3 = estoque_prod3 +qtd_carrinho_prod3
+
+       escreva("Digite a NOVA quantidade total para este item:")
+
+       leia(quantidade_temp) 
+                              
+       se(quantidade_temp >= 0 e quantidade_temp <= estoque_prod3)
+       qtd_carrinho_prod3 = quantidade_temp
+       estoque_prod3 = estoque_prod3 - quantidade_temp
+       escreva("Quantidade atualizada com sucesso !")
+
+      } senao {
+
+       estoque_prod3 = estoque_prod3 - qtd_carrinho_prod3
+
+       escreva("
